@@ -10,8 +10,8 @@ namespace Recap.Domain.ValueObjects
     {
         public Guid Id { get; set; }
         public Guid ProjectId { get; set; }
-        public DateTime OpenDate { get; set; }
-        public DateTime CloseDate { get; set; }
+        public DateTime? OpenDate { get; set; }
+        public DateTime? CloseDate { get; set; }
         public string Descpription { get; set; }
         public bool Enabled { get; set; }
         public bool Deleted { get; set; }
@@ -21,12 +21,11 @@ namespace Recap.Domain.ValueObjects
         {
 
         }
-        public ProjectPhase(Guid projectId, string description, DateTime openDate, int order)
+        public ProjectPhase(Guid projectId, string description, int order)
         {
             this.Id = Guid.NewGuid();
             this.ProjectId = projectId;
             this.Descpription = description;
-            this.OpenDate = openDate;
             this.Enabled = true;
             this.Deleted = false;
             this.Order = order;

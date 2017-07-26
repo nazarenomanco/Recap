@@ -56,6 +56,10 @@
     <Compile Include="Projects\IProjectCreated.cs" />
     <Compile Include="Projects\IProjectDeleted.cs" />
     <Compile Include="Projects\IProjectPhaseAdded.cs" />
+    <Compile Include="Projects\IProjectPhaseClosed.cs" />
+    <Compile Include="Projects\IProjectPhaseDisabled.cs" />
+    <Compile Include="Projects\IProjectPhaseEnabled.cs" />
+    <Compile Include="Projects\IProjectPhaseOpen.cs" />
     <Compile Include="Projects\Project.cs" />
     <Compile Include="Users\IUserCreated.cs" />
     <Compile Include="Users\IUserDeleted.cs" />
