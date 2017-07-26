@@ -45,25 +45,6 @@ namespace Recap.Domain.Calendars
             }); 
         }
 
-        public Guid AddActivity(string customerName, string pizzaTaste)
-        {
-            if (customerName == null) throw new ArgumentNullException(nameof(customerName));
-            if (pizzaTaste == null) throw new ArgumentNullException(nameof(pizzaTaste));
-
-            var order = new Activity();
-            this.Data.Activities.Add(order);
-
-            this.RaiseEvent<IActivityAdded>(e =>
-            {
-                //e.CustomerName = customerName;
-                //e.PizzaTaste = pizzaTaste;
-                //e.OrderId = order.Id;
-            });
-
-            return order.Id;
-
-        }
-
 
     }
 }

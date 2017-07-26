@@ -55,6 +55,7 @@
     <Compile Include="Projects\IProjectClosed.cs" />
     <Compile Include="Projects\IProjectCreated.cs" />
     <Compile Include="Projects\IProjectDeleted.cs" />
+    <Compile Include="Projects\IProjectPhaseAdded.cs" />
     <Compile Include="Projects\Project.cs" />
     <Compile Include="Users\IUserCreated.cs" />
     <Compile Include="Users\IUserDeleted.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Users\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\Activity.cs" />
+    <Compile Include="ValueObjects\ProjectPhase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

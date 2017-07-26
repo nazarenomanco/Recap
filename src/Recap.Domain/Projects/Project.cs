@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Radical.CQRS;
+using Recap.Domain.ValueObjects;
 
 namespace Recap.Domain.Projects
 {
@@ -13,6 +15,7 @@ namespace Recap.Domain.Projects
             public DateTime CloseDate { get; set; }
             public Guid CustomerId { get; set; }
             public bool Deleted { get; set; }
+            public ISet<ProjectPhase> Phases { get; set; } = new HashSet<ProjectPhase>();
         }
 
 
@@ -31,7 +34,9 @@ namespace Recap.Domain.Projects
                     Year = year,
                     OpenDate = openDate,
                     CustomerId = customerId,
-                    Deleted = false
+                    Deleted = false,
+                    Phases = new HashSet<ProjectPhase>()
+                    
                 };
                 var aggregate = new Project(state);
                 aggregate.SetupCompleted();
@@ -71,6 +76,23 @@ namespace Recap.Domain.Projects
 
             this.RaiseEvent<IProjectDeleted>(e => { });
 
+        }
+
+        public Guid AddPhase(string descrition, DateTime openDate, int order)
+        {
+            if (descrition == null) throw new ArgumentNullException(nameof(descrition));
+
+            var phase = new ProjectPhase(Id, descrition, openDate, order);
+            this.Data.Phases.Add(phase);
+
+            this.RaiseEvent<IProjectPhaseAdded>(e =>
+            {
+                e.Description = descrition;
+                e.OpenDate = openDate;
+                e.PhaseId = phase.Id;
+            });
+
+            return phase.Id;
         }
 
 
