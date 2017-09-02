@@ -11,13 +11,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Fluent;
 
 namespace Recap.Clients.WPF.Presentation
 {
-    /// <summary>
-    /// Interaction logic for MainView.xaml
-    /// </summary>
-    public partial class MainView : Window
+
+    public partial class MainView : RibbonWindow
     {
         public MainView()
         {
