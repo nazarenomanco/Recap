@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recap.Domain", "Recap.Domain\Recap.Domain.csproj", "{2FB8B789-E4C7-411F-9863-E614A33E4E2D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recap.Messages", "Recap.Messages\Recap.Messages.csproj", "{63234AC2-2CAF-47AE-8196-466BCED463B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recap.ViewModels", "Recap.ViewModels\Recap.ViewModels.csproj", "{FD29D64A-5AEE-4956-BD59-75206E37B88C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recap.Clients.WPF", "Recap.Clients.WPF\Recap.Clients.WPF.csproj", "{F734C4EC-24CB-43A9-86FF-EFCA8D409271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +41,15 @@ Global
 		{FD29D64A-5AEE-4956-BD59-75206E37B88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD29D64A-5AEE-4956-BD59-75206E37B88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD29D64A-5AEE-4956-BD59-75206E37B88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F734C4EC-24CB-43A9-86FF-EFCA8D409271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F734C4EC-24CB-43A9-86FF-EFCA8D409271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F734C4EC-24CB-43A9-86FF-EFCA8D409271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F734C4EC-24CB-43A9-86FF-EFCA8D409271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49115B12-A918-4D84-B2D9-8B72CC097238}
 	EndGlobalSection
 EndGlobal
